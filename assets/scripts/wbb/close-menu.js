@@ -24,15 +24,6 @@
             menuWidth: 255,
             backText: "Back",
             swipe: "desktop",
-            /*onMenuSwipe: function () {
-
-             var container = $(".js-menu-opener");
-             var data_colapsed = container.attr("data-colapsed");
-             if (data_colapsed === "1")
-             {
-             container.attr("data-colapsed", 0);
-             }
-             }*/
 
         });
 
