@@ -5,7 +5,7 @@
 		<div id="trigger-mobile" class="close-menu js-close-menu js-collapse-offcanvas reorder-close">x</div>
 
 		<?php
-/*		if ( has_nav_menu ( 'primary_navigation' ) ) :
+		if ( has_nav_menu ( 'primary_navigation' ) ) :
 
 			$defaults = array (
 				'theme_location' => 'primary_navigation' ,
@@ -25,35 +25,7 @@
 
 		endif;
 
-		*/?>
-
-        <!-- Demos links -->
-
-		<ul>
-			<li><a>Item 1</a></li>
-			<li><a>Item 2</a></li>
-			<li><a>Item 3</a></li>
-			<li><a>Item 4</a></li>
-			<li>
-                <a>Item 5</a></a>
-                <ul>
-                    <li><a>Sub-item 5.1</a></li>
-                    <li><a>Sub-item 5.2</a></li>
-                    <li><a>Sub-item 5.3</a></li>
-                    <li>
-                        <a>Sub-item 5.4</a>
-                        <ul>
-                            <li><a>Sub-item 5.4.1</a></li>
-                            <li><a>Sub-item 5.4.2</a></li>
-                            <li><a>Sub-item 5.4.3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-            </li>
-		</ul>
-
-        <!-- End Demos links -->
+		?>
 
 	</nav>
 
