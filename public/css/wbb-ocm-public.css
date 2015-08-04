@@ -1,0 +1,169 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+  .wbb-ocm-container
+, .wbb-ocm-submenu
+{
+
+    position: fixed;
+    z-index: 9998;
+
+    width: 250px;
+    height: 100%;
+
+    top: 0px;
+    
+
+    padding-top: 25px;
+
+    transition: 0.25s ease-in-out;
+
+    -webkit-box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow:    2px 0px 5px 0px rgba(0,0,0,0.4);
+    box-shadow:         2px 0px 5px 0px rgba(0,0,0,0.4);
+
+}
+
+
+.wbb-ocm-container.left{
+    left: -250px;
+}
+.wbb-ocm-container.right{
+    right: -250px;
+}
+
+
+.wbb-ocm-container.left.active{
+    left: 0px;
+}
+.wbb-ocm-container.right.active{
+    right: 0px;
+}
+
+.wbb-ocm-submenu{
+    width: 245px;
+    transition: 0.25 linear;
+}
+
+.wbb-ocm-container.left .wbb-ocm-submenu{
+    left: -255px;
+}
+.wbb-ocm-container.left .wbb-ocm-submenu.active
+{
+    left: -5px;
+}
+
+.wbb-ocm-container.right .wbb-ocm-submenu{
+    right: -255px;
+}
+.wbb-ocm-container.right .wbb-ocm-submenu.active
+{
+    right: -5px;
+}
+
+
+
+/*
+    
+*/
+body{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+    transition: 0.25s ease-in-out;
+}
+
+body.left.active{
+    margin-left: 250px;
+    margin-right: -250px;
+}
+body.right.active{
+    margin-left: -250px;
+    margin-right: 250px;
+}
+
+.wbb-ocm-trigger{
+
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+
+}
+.wbb-ocm-trigger.right{
+    float: right;
+}
+
+
+/* Close button */
+.wbb-ocm-main-title{
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.wbb-ocm-main-title menuitem{
+    padding: 5px 20px;
+}
+
+.wbb-ocm-main-title span{
+    float: right;
+}
+
+/* LISTS */
+
+.wbb-ocm-container menu menuitem menu{
+    display: none;
+}
+
+
+.wbb-ocm-submenu menu menuitem menu{
+    display: none;
+}
+
+.wbb-ocm-container menuitem{
+    cursor: pointer;
+}
+
+menu, menuitem{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+menu.wbb-ocm-submenu
+{
+    border-right: 1px solid;
+}
+
+menuitem{
+    display: block;
+    outline: none;
+    overflow: hidden;
+    padding: .4em .2em .4em 1em;
+    text-decoration: none;
+    color: #fff;
+    
+    border-bottom: 1px solid;
+}
+
+
+
+/*
+TRIGGER BUTTON
+*/
+.wbb-ocm-trigger{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    
+}
+.wbb-ocm-trigger img{
+    width: 100%;
+    height: 100%;
+}
