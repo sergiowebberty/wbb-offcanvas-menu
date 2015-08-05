@@ -22,8 +22,12 @@
     <h3>Status</h3>
     <div class="wbb_ocm_setting_block wbb_ocm_status_block">
         
-        <div class="wbb_checkbox">
-            <span class="<?php echo ( $ocm_status === "activated" ? "activated" : "" )?>"></span>
+        <div class="wbb_checkbox <?php echo ( $ocm_status === "activated" ? "activated" : "" )?>">
+            
+            <span class="on">On</span>
+            <span class="off">Off</span>
+            
+            <span class="indicator"></span>
         </div>
         
         <div class="wbb_ocm_status_result"><?php echo ( $ocm_status === "activated" ? "activated" : "deactivated" );?></div>

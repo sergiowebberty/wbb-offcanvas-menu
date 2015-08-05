@@ -8,16 +8,16 @@
         $ ( 'input.wbb_ocm_colorpicker' ).wpColorPicker ();
 
         $(".wbb_checkbox").click(function(){
-            $(".wbb_checkbox span").toggleClass ("activated");
-            if( $(".wbb_checkbox span").hasClass("activated") )
+            $(".wbb_checkbox").toggleClass ("activated");
+            if( $(".wbb_checkbox").hasClass("activated") )
             {
-                $("input[name='wbb_ocm_status']").val("activated")
-                $(".wbb_ocm_status_result").html( "activated" )
+                $("input[name='wbb_ocm_status']").val("activated");
+                $(".wbb_ocm_status_result").html( "activated" );
             }
             else
             {
-                $("input[name='wbb_ocm_status']").val("deactivated")
-                $(".wbb_ocm_status_result").html( "deactivated" )
+                $("input[name='wbb_ocm_status']").val("deactivated");
+                $(".wbb_ocm_status_result").html( "deactivated" );
             }
         });
 
