@@ -117,7 +117,7 @@ class WBB_Off_Canvas_Menu_Public
          * class.
          */
         wp_enqueue_script ( $this->plugin_name, plugin_dir_url ( __FILE__ ) . 'js/wbb-ocm-public.js', array(
-            'jquery'), $this->version, false );
+            'jquery'), $this->version, true );
         wp_localize_script ( $this->plugin_name, 'MyAjax', array(
             'ajaxurl' => admin_url ( 'admin-ajax.php' )) );
     }
@@ -134,7 +134,7 @@ class WBB_Off_Canvas_Menu_Public
 
             <div class="wbb-ocm-container <?php echo $sidebar_side?>">
                 <menu class="wbb-ocm-main-title">
-                    <menuitem>Title <span class="wbb-ocm-close">X</span></menuitem>
+                    <menuitem><span class="wbb-ocm-close">X</span></menuitem>
                 </menu>
                 <?php
                 $menu_name = get_theme_mod ( "wbb_ocm_menu_name" );
@@ -250,6 +250,9 @@ class WBB_Off_Canvas_Menu_Public
             "wbb_ocm_font_color_hover" => get_option ( "wbb_ocm_font_color_hover" )
             ,
             "wbb_ocm_font_family"      => get_option ( "wbb_ocm_font_family" )
+            , 
+            "wbb_ocm_trigger_background"    => ( get_theme_mod("wbb_ocm_trigger_background") !== "" ? get_theme_mod("wbb_ocm_trigger_background") : "#321321" )
+            
         ) );
         die ();
     }

@@ -173,8 +173,10 @@ class WBB_Off_Canvas_Menu_Admin
         $ocm_status = ( get_theme_mod("wbb_ocm_status") !== "" ? get_theme_mod("wbb_ocm_status") : "deactivated" );
 
         $sidebar_side = ( get_theme_mod("wbb_ocm_sidebar_side") !== "" ? get_theme_mod("wbb_ocm_sidebar_side") : "left" );
+        
         $trigger_side = ( get_theme_mod("wbb_ocm_trigger_side") !== "" ? get_theme_mod("wbb_ocm_trigger_side") : "left" );
         $trigger_icon = ( get_option("wbb_ocm_trigger_icon") !== "" ? get_option("wbb_ocm_trigger_icon") : plugin_dir_url(__FILE__) . "img/trigger_icon1.png" );
+        $trigger_background = ( get_theme_mod("wbb_ocm_trigger_background") !== "" ? get_theme_mod("wbb_ocm_trigger_background") : "#321321" );
 
         $menu_name        = get_theme_mod("wbb_ocm_menu_name");
         $css_selector     = get_option("wbb_ocm_css_selector");
@@ -200,6 +202,9 @@ class WBB_Off_Canvas_Menu_Admin
     function wbb_off_canvas_save_settings()
     {
 
+        if ( isset($_POST[ "wbb_ocm_trigger_background" ]) )
+            set_theme_mod("wbb_ocm_trigger_background", $_POST[ "wbb_ocm_trigger_background" ]);
+        
         if ( isset($_POST[ "wbb_ocm_sidebar_side" ]) )
             set_theme_mod("wbb_ocm_sidebar_side", $_POST[ "wbb_ocm_sidebar_side" ]);
 

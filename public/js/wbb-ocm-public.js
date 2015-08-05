@@ -90,8 +90,9 @@
                 $ ( "\
   .wbb-ocm-container\n\
 , .wbb-ocm-container menu\n\
-, .wbb-ocm-trigger\n\
 , .wbb-ocm-submenu, .wbb-ocm-container menuitem" ).css ( "background-color", style.wbb_ocm_background );
+
+$(".wbb-ocm-trigger").css("background-color", style.wbb_ocm_trigger_background)
 
 
                 $ ( ".wbb-ocm-container menuitem" ).mouseenter ( function () {

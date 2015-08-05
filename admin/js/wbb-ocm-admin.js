@@ -100,9 +100,10 @@
 
         if( $(".wbb_ocm_settings_container").length > 0 )
         {
+            
             setInterval ( function () {
-                $ ( ".wbb_com_trigger_icon_selected" ).css ( "background-color", $ ( "input[name='wbb_ocm_background']" ).val () );
-            }, 1000 );
+                $ ( ".wbb_com_trigger_icon_selected" ).css ( "background-color", $ ( "input[name='wbb_ocm_trigger_background']" ).val () );
+            }, 500 );
             
         }
 
@@ -135,6 +136,7 @@
                 , wbb_ocm_sidebar_side: $ ( "select[name='wbb_ocm_sidebar_side']" ).val ()
                 , wbb_ocm_trigger_side: $ ( "select[name='wbb_ocm_trigger_side']" ).val ()
                 , wbb_ocm_trigger_icon: $ ( "input[name='wbb_ocm_trigger_icon']" ).val ()
+                , wbb_ocm_trigger_background: $ ( "input[name='wbb_ocm_trigger_background']" ).val ()
                 , wbb_ocm_devices_desktop: $ ( "input[name='wbb_ocm_devices_desktop']" ).val ()
                 , wbb_ocm_devices_laptop: $ ( "input[name='wbb_ocm_devices_laptop']" ).val ()
                 , wbb_ocm_devices_tablet: $ ( "input[name='wbb_ocm_devices_tablet']" ).val ()

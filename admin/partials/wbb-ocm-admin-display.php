@@ -184,10 +184,14 @@
 
                 <hr>
 
+                <span>Trigger button background</span><br>
+                <input type="text" class="wbb_ocm_colorpicker trigger_background" name="wbb_ocm_trigger_background" value="<?php echo $trigger_background ?>" >
+                
                 <span class="info-span">Icon preview:</span>
-                <img class="wbb_com_trigger_icon_selected" src="<?php echo $trigger_icon ?>" style="background-color: <?php echo $background?>">
+                <img class="wbb_com_trigger_icon_selected" src="<?php echo $trigger_icon ?>" style="background-color: <?php echo $trigger_background?>">
 
-
+                
+                
             </label>
         </div>
 
