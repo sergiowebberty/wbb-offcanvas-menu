@@ -331,7 +331,8 @@ class WBB_Off_Canvas_Menu_Admin
             'wp-color-picker' ), false, true);
             */
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wbb-ocm-admin.js', array(
-            'jquery' ), $this->version, false);
+            'jquery', "wp-color-picker" ), $this->version, false);
+            //'jquery'), $this->version, false);
 
         wp_localize_script($this->plugin_name, 'MyAjax', array(
             'ajaxurl' => admin_url('admin-ajax.php') ));
