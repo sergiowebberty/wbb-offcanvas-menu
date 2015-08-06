@@ -72,8 +72,25 @@ class WBB_Off_Canvas_Menu_Admin
             'wbb_off_canvas_customizer_live_preview'
             ) 
         );
+        
+        
+        
+        add_filter('plugin_action_links', array($this, 'wbb_ocm_setting_link'), 10, 2);
+        
+        
+        
     }
 
+    public function wbb_ocm_setting_link($links, $file) {
+
+        if ( $file == 'wbb-offcanvas-menu/wbb-ocm.php' ) {
+            /* Insert the link at the end*/
+            $links['settings'] = sprintf( '<a href="%s"> %s </a>', admin_url( 'themes.php?page=wbb-off-canvas-menu' ), __( 'Settings', 'plugin_domain' ) );
+        }
+        return $links;
+
+    }
+    
     public function wbb_off_canvas_customizer_live_preview()
     {
         wp_enqueue_script($this->plugin_name."-customizer-js", plugin_dir_url(__FILE__) . 'js/wbb-ocm-customizer.js',  array( 'jquery', 'customize-preview' ), $this->version, false);
