@@ -1,5 +1,5 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+=== wbb-offcanvas-menu ===
+Contributors: Webberty
 Donate link: http://webberty.com
 Tags: menu, offcanvas
 Requires at least: 3.0.1
@@ -10,6 +10,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
+
+## Documentation
 
 
 == Installation ==
