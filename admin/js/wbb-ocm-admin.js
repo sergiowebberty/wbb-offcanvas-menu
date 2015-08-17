@@ -7,6 +7,10 @@
 
         $ ( 'input.wbb_ocm_colorpicker' ).wpColorPicker ();
 
+        /**
+         * Check if we check the On/Off button
+         */
+
         $(".wbb_checkbox").click(function(){
             $(".wbb_checkbox").toggleClass ("activated");
             if( $(".wbb_checkbox").hasClass("activated") )
@@ -32,6 +36,9 @@
 
         } )
 
+        /**
+         * Activate / deactivate the devices to show the menu
+         */
         $ ( ".wbb_com_device" ).click ( function () {
 
             console.log ( $ ( this ).find ( "input" ).attr ( "name" ) )
@@ -50,6 +57,10 @@
 
         } );
 
+
+        /**
+         * Activate / deactivate the trigger icon selected for the menu
+         */
         $ ( ".wbb_ocm_trigger_icon" ).click ( function () {
 
             $ ( ".wbb_ocm_trigger_icon" ).removeClass ( "active" )
@@ -123,8 +134,11 @@
 
 
     } );
-    
 
+
+    /**
+     * Get the data and send via ajax to save them
+     */
     $ ( document ).on ( "click", ".wbb_ocm_settings_submit", function () {
 
         $.ajax ( {

@@ -26,6 +26,8 @@
  * @package    WBB_Off_Canvas_Menu
  * @subpackage WBB_Off_Canvas_Menu/includes
  * @author     Webberty <info@webberty.com>
+ * Text Domain:       wbb-offcanvas-menu
+ * Domain Path:       /languages
  */
 class WBB_Off_Canvas_Menu {
 

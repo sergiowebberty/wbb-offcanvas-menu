@@ -19,31 +19,31 @@
     <h1>WBB Off Canvas Menu</h1>
     <hr>
     
-    <h3>Status</h3>
+    <h3><?php _e("Status", "wbb-offcanvas-menu");?></h3>
     <div class="wbb_ocm_setting_block wbb_ocm_status_block">
         
         <div class="wbb_checkbox <?php echo ( $ocm_status === "activated" ? "activated" : "" )?>">
             
-            <span class="on">On</span>
-            <span class="off">Off</span>
+            <span class="on"><?php _e("On", "wbb-offcanvas-menu");?></span>
+            <span class="off"><?php _e("Off", "wbb-offcanvas-menu");?></span>
             
             <span class="indicator"></span>
         </div>
         
         <div class="wbb_ocm_status_result"><?php echo ( $ocm_status === "activated" ? "activated" : "deactivated" );?></div>
         <br>
-        <small>The admins always will see the menu, to check the style before activate.</small>
+        <small><?php _e("The admins always will see the menu, to check the style before activate.", "wbb-offcanvas-menu");?></small>
         <input type="hidden" name="wbb_ocm_status" value="<?php echo $ocm_status?>" />
         
     </div>
     
     
-    <h3>Menu and devices options</h3>
+    <h3><?php _e("Menu and devices options", "wbb-offcanvas-menu");?></h3>
     <div class="wbb_ocm_setting_block">
 
         <div class="left-col">
             <label>
-                <span class="info-span">Menu Name</span>
+                <span class="info-span"><?php _e("Menu Name", "wbb-offcanvas-menu");?></span>
                 
                 <select name="wbb_ocm_menu_name">
                     <?php
@@ -62,7 +62,7 @@
         </div>
         <div class="right-col">
             <label>
-                <span class="info-span">Select the devices screen where the menu will be available</span>
+                <span class="info-span"><?php _e("Select the devices screen where the menu will be available", "wbb-offcanvas-menu");?></span>
 
                 <div class="wbb_ocm_device_inputs_container">
 
@@ -86,20 +86,20 @@
     </div>
 
 
-    <h3>Sidebar options</h3>
+    <h3><?php _e("Sidebar options", "wbb-offcanvas-menu");?></h3>
     <div class="wbb_ocm_setting_block">
 
         <div class="left-col">
             <label>
-                <span class="info-span">Sidebar side</span>
+                <span class="info-span"><?php _e("Sidebar side", "wbb-offcanvas-menu");?></span>
                 <select name="wbb_ocm_sidebar_side">
-                    <option value="left" <?php echo ($sidebar_side === "left" ? "selected" : "") ?>>Left</option>
-                    <option value="right" <?php echo ($sidebar_side === "right" ? "selected" : "") ?>>Right</option>
+                    <option value="left" <?php echo ($sidebar_side === "left" ? "selected" : "") ?>><?php _e("Left", "wbb-offcanvas-menu");?></option>
+                    <option value="right" <?php echo ($sidebar_side === "right" ? "selected" : "") ?>><?php _e("Right", "wbb-offcanvas-menu");?></option>
                 </select>
             </label>
 
             <label>
-                <span class="info-span">Select Font Family</span>
+                <span class="info-span"><?php _e("Select Font Family", "wbb-offcanvas-menu");?></span>
                 
                 <input type="hidden" name="wbb_ocm_font_family" value="<?php echo str_replace ( "\\", "", $font_family ) ?>" />
                 
@@ -117,25 +117,25 @@
             <fieldset>
 
                 <label>
-                    <span class="info-span">Background</span>
+                    <span class="info-span"><?php _e("Background", "wbb-offcanvas-menu");?></span>
                     <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_background" value="<?php echo $background ?>" >
                 </label>
                 <label>
-                    <span class="info-span">Background on mouse over</span>
+                    <span class="info-span"><?php _e("Background on mouse over", "wbb-offcanvas-menu");?></span>
                     <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_background_hover" value="<?php echo $background_hover ?>" >
                 </label>
                 <label>
-                    <span class="info-span">Borders</span>
+                    <span class="info-span"><?php _e("Borders", "wbb-offcanvas-menu");?></span>
                     <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_borders" value="<?php echo $borders ?>" >
                 </label>
                 <label>
-                    <span class="info-span">Font color</span>
+                    <span class="info-span"><?php _e("Font color", "wbb-offcanvas-menu");?></span>
                     <div class="color-container">
                         <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_font_color" value="<?php echo $font_color ?>" >
                     </div>
                 </label>
                 <label>
-                    <span class="info-span">Font color on mouse over</span>
+                    <span class="info-span"><?php _e("Font color on mouse over", "wbb-offcanvas-menu");?></span>
                     <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_font_color_hover" value="<?php echo $font_color_hover ?>" >
                 </label>
 
@@ -145,18 +145,18 @@
     </div>
 
 
-    <h3>Trigger button options</h3>
+    <h3><?php _e("Trigger button options", "wbb-offcanvas-menu");?></h3>
     <div class="wbb_ocm_setting_block">
 
         <div class="left-col">
 
             <label>
-                <span class="info-span">ID or Class (css selector) where the push menu trigger button will appear.</span>
+                <span class="info-span"><?php _e("ID or Class (css selector) where the push menu trigger button will appear.", "wbb-offcanvas-menu");?></span>
                 <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" >
             </label>
 
             <label>
-                <span class="info-span">Trigger button side</span>
+                <span class="info-span"><?php _e("Trigger button side", "wbb-offcanvas-menu");?></span>
                 <select name="wbb_ocm_trigger_side">
                     <option value="left" <?php echo ($trigger_side === "left" ? "selected" : "") ?>>Left</option>
                     <option value="right" <?php echo ($trigger_side === "right" ? "selected" : "") ?>>Right</option>
@@ -166,7 +166,7 @@
         <div class="right-col">
             <label>
 
-                <span class="info-span">Select the trigger button icon</span>
+                <span class="info-span"><?php _e("Select the trigger button icon", "wbb-offcanvas-menu");?></span>
 
                 <input type="hidden" name="wbb_ocm_trigger_icon" value="<?php echo $trigger_icon ?>" />
 
@@ -184,14 +184,14 @@
                 </ul>
                 <hr>
 
-                <div class="button wbb_ocm_trigger_icon_button">Upload your icon</div>
+                <div class="button wbb_ocm_trigger_icon_button"><?php _e("Upload your icon", "wbb-offcanvas-menu");?></div>
 
                 <hr>
 
-                <span class="info-span">Trigger button background</span><br>
+                <span class="info-span"><?php _e("Trigger button background", "wbb-offcanvas-menu");?></span><br>
                 <input type="text" class="wbb_ocm_colorpicker trigger_background" name="wbb_ocm_trigger_background" value="<?php echo $trigger_background ?>" >
                 
-                <span class="info-span">Icon preview:</span>
+                <span class="info-span"><?php _e("Icon preview:", "wbb-offcanvas-menu");?></span>
                 <img class="wbb_com_trigger_icon_selected" src="<?php echo $trigger_icon ?>" style="background-color: <?php echo $trigger_background?>">
 
                 
@@ -202,7 +202,7 @@
     </div>
 
     <hr>
-    <div class="wbb_ocm_settings_submit button button-primary">Update</div>
+    <div class="wbb_ocm_settings_submit button button-primary"><?php _e("Update", "wbb-offcanvas-menu");?></div>
 
 </div>
 

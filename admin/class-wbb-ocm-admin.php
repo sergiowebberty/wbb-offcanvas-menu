@@ -81,7 +81,13 @@ class WBB_Off_Canvas_Menu_Admin
         
     }
 
-    public function wbb_ocm_setting_link($links, $file) {
+	/**
+	 * @param $links
+	 * @param $file
+	 *
+	 * @return mixed
+	 */
+	public function wbb_ocm_setting_link($links, $file) {
 
         if ( $file == 'wbb-offcanvas-menu/wbb-ocm.php' ) {
             /* Insert the link at the end*/
@@ -90,8 +96,11 @@ class WBB_Off_Canvas_Menu_Admin
         return $links;
 
     }
-    
-    public function wbb_off_canvas_customizer_live_preview()
+
+	/**
+	 * Functions that ...
+	 */
+	public function wbb_off_canvas_customizer_live_preview()
     {
         wp_enqueue_script($this->plugin_name."-customizer-js", plugin_dir_url(__FILE__) . 'js/wbb-ocm-customizer.js',  array( 'jquery', 'customize-preview' ), $this->version, false);
 
@@ -99,7 +108,11 @@ class WBB_Off_Canvas_Menu_Admin
             'ajaxurl' => admin_url('admin-ajax.php') ));
     }
 
-    public function wbb_ocm_customize($wp_customize)
+	/**
+	 * Function that adds section and settings in Customizer Admin Page
+	 * @param $wp_customize
+	 */
+	public function wbb_ocm_customize($wp_customize)
     {
         $wp_customize->add_section('wbb_ocm_section', array(
             'priority'       => 1190,
