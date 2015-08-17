@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wbb-offcanvasmenu-plugin\n"
-"POT-Creation-Date: 2015-08-17 15:51+0200\n"
-"PO-Revision-Date: 2015-08-17 16:01+0200\n"
+"POT-Creation-Date: 2015-08-17 16:23+0200\n"
+"PO-Revision-Date: 2015-08-17 16:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -22,7 +22,7 @@ msgstr "Configuración"
 
 #: admin/class-wbb-ocm-admin.php:121
 msgid "Off Canvas Menu"
-msgstr ""
+msgstr "Off Canvas Menu"
 
 #: admin/partials/wbb-ocm-admin-display.php:22
 msgid "Status"
@@ -30,15 +30,26 @@ msgstr "Estado"
 
 #: admin/partials/wbb-ocm-admin-display.php:27
 msgid "On"
-msgstr "Encendido"
+msgstr "On"
 
 #: admin/partials/wbb-ocm-admin-display.php:28
 msgid "Off"
-msgstr "Apagado"
+msgstr "Off"
+
+#: admin/partials/wbb-ocm-admin-display.php:33
+msgid "activated"
+msgstr "activado"
+
+#: admin/partials/wbb-ocm-admin-display.php:33
+msgid "deactivated"
+msgstr "desactivado"
 
 #: admin/partials/wbb-ocm-admin-display.php:35
-msgid "The admins always will see the menu, to check the style before activate."
-msgstr "Los administradores siempre serán ver el menú, para comprobar el estilo antes de activar."
+msgid ""
+"The admins always will see the menu, to check the style before activate."
+msgstr ""
+"Los administradores siempre podrán ver el menú, para comprobar el estilo "
+"antes de activar."
 
 #: admin/partials/wbb-ocm-admin-display.php:41
 msgid "Menu and devices options"
@@ -50,7 +61,8 @@ msgstr "Nombre del menú"
 
 #: admin/partials/wbb-ocm-admin-display.php:65
 msgid "Select the devices screen where the menu will be available"
-msgstr "Seleccione la pantalla de los dispositivos donde el menú estará disponible"
+msgstr ""
+"Seleccione la pantalla de los dispositivos donde el menú estará disponible"
 
 #: admin/partials/wbb-ocm-admin-display.php:89
 msgid "Sidebar options"
@@ -97,7 +109,8 @@ msgid "Trigger button options"
 msgstr "Opciones del botón lanzador"
 
 #: admin/partials/wbb-ocm-admin-display.php:154
-msgid "ID or Class (css selector) where the push menu trigger button will appear."
+msgid ""
+"ID or Class (css selector) where the push menu trigger button will appear."
 msgstr "ID o clase (selector css)  donde el botón lanzador aparecerá"
 
 #: admin/partials/wbb-ocm-admin-display.php:159

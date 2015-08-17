@@ -30,7 +30,12 @@
             <span class="indicator"></span>
         </div>
         
-        <div class="wbb_ocm_status_result"><?php echo ( $ocm_status === "activated" ? "activated" : "deactivated" );?></div>
+
+        <div class="wbb_ocm_status_result wbb_ocm_status_result_activated" style="display: none;"><?php echo __("activated", "wbb-offcanvas-menu");?></div>
+
+        <div class="wbb_ocm_status_result wbb_ocm_status_result_deactivated" style="display: none;"><?php echo __("deactivated", "wbb-offcanvas-menu");?></div>
+
+<!--        <div class="wbb_ocm_status_result"><?php echo ( $ocm_status === "activated" ? __("activated", "wbb-offcanvas-menu") : __("deactivated", "wbb-offcanvas-menu") );?></div>-->
         <br>
         <small><?php _e("The admins always will see the menu, to check the style before activate.", "wbb-offcanvas-menu");?></small>
         <input type="hidden" name="wbb_ocm_status" value="<?php echo $ocm_status?>" />

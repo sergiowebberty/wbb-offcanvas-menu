@@ -6,6 +6,19 @@
     $ ( document ).ready ( function () {
 
         $ ( 'input.wbb_ocm_colorpicker' ).wpColorPicker ();
+        
+        if( $(".wbb_checkbox").hasClass("activated") )
+            {
+                $("input[name='wbb_ocm_status']").val("activated");
+                $(".wbb_ocm_status_result_activated").show();
+                $(".wbb_ocm_status_result_deactivated").hide();
+            }
+            else
+            {
+                $("input[name='wbb_ocm_status']").val("deactivated");
+                $(".wbb_ocm_status_result_deactivated").show();
+                $(".wbb_ocm_status_result_activated").hide();
+            }
 
         /**
          * Check if we check the On/Off button
@@ -16,12 +29,14 @@
             if( $(".wbb_checkbox").hasClass("activated") )
             {
                 $("input[name='wbb_ocm_status']").val("activated");
-                $(".wbb_ocm_status_result").html( "activated" );
+                $(".wbb_ocm_status_result_activated").show();
+                $(".wbb_ocm_status_result_deactivated").hide();
             }
             else
             {
                 $("input[name='wbb_ocm_status']").val("deactivated");
-                $(".wbb_ocm_status_result").html( "deactivated" );
+                $(".wbb_ocm_status_result_deactivated").show();
+                $(".wbb_ocm_status_result_activated").hide();
             }
         });
 
