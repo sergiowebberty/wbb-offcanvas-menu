@@ -200,28 +200,30 @@ class WBB_Off_Canvas_Menu_Admin
     function wbb_off_canvas_menu_settings()
     {
 
-        $ocm_status = ( get_theme_mod("wbb_ocm_status") !== "" ? get_theme_mod("wbb_ocm_status") : "deactivated" );
+        $ocm_status = ( get_theme_mod("wbb_ocm_status") != null ? get_theme_mod("wbb_ocm_status") : "deactivated" );
 
-        $sidebar_side = ( get_theme_mod("wbb_ocm_sidebar_side") !== "" ? get_theme_mod("wbb_ocm_sidebar_side") : "left" );
+        $sidebar_side = ( get_theme_mod("wbb_ocm_sidebar_side") != null ? get_theme_mod("wbb_ocm_sidebar_side") : "left" );
         
-        $trigger_side = ( get_theme_mod("wbb_ocm_trigger_side") !== "" ? get_theme_mod("wbb_ocm_trigger_side") : "left" );
-        $trigger_icon = ( get_option("wbb_ocm_trigger_icon") !== "" ? get_option("wbb_ocm_trigger_icon") : plugin_dir_url(__FILE__) . "img/trigger_icon1.png" );
-        $trigger_background = ( get_theme_mod("wbb_ocm_trigger_background") !== "" ? get_theme_mod("wbb_ocm_trigger_background") : "#321321" );
+        $trigger_side = ( get_theme_mod("wbb_ocm_trigger_side") != null ? get_theme_mod("wbb_ocm_trigger_side") : "left" );
+        $trigger_icon = ( get_option("wbb_ocm_trigger_icon") != null ? get_option("wbb_ocm_trigger_icon") : plugin_dir_url(__FILE__) . "img/trigger-icon-1.png" );
+        $trigger_background = ( get_theme_mod("wbb_ocm_trigger_background") != null ? get_theme_mod("wbb_ocm_trigger_background") : "#321321" );
 
         $menu_name        = get_theme_mod("wbb_ocm_menu_name");
-        $css_selector     = (get_option("wbb_ocm_css_selector") !== "" ? get_option("wbb_ocm_css_selector") : ".wbb-off-canvas" );
-        $background       = ( get_option("wbb_ocm_background") !== "" ? get_option("wbb_ocm_background") : "#fff" );
-        $background_hover = ( get_option("wbb_ocm_background_hover") !== "" ? get_option("wbb_ocm_background_hover") : "#fff" );
-        $borders          = ( get_option("wbb_ocm_borders") !== "" ? get_option("wbb_ocm_borders") : "#bbb" );
-        $font_color       = ( get_option("wbb_ocm_font_color") !== "" ? get_option("wbb_ocm_font_color") : "#777" );
-        $font_color_hover = ( get_option("wbb_ocm_font_color_hover") !== "" ? get_option("wbb_ocm_font_color_hover") : "#777" );
+        $css_selector     = (get_option("wbb_ocm_css_selector") != null ? get_option("wbb_ocm_css_selector") : "wbb-off-canvas" );
+        $background       = ( get_option("wbb_ocm_background") != null ? get_option("wbb_ocm_background") : "#fff" );
+        $background_hover = ( get_option("wbb_ocm_background_hover") != null ? get_option("wbb_ocm_background_hover") : "#fff" );
+        $borders          = ( get_option("wbb_ocm_borders") != null ? get_option("wbb_ocm_borders") : "#bbb" );
+        $font_color       = ( get_option("wbb_ocm_font_color") != null ? get_option("wbb_ocm_font_color") : "#777" );
+        $font_color_hover = ( get_option("wbb_ocm_font_color_hover") != null ? get_option("wbb_ocm_font_color_hover") : "#777" );
         $font_family      = get_option("wbb_ocm_font_family");
 
-        $devices_desktop = ( get_option("wbb_ocm_devices_desktop") !== "" ? get_option("wbb_ocm_devices_desktop") : 0 );
-        $devices_laptop  = ( get_option("wbb_ocm_devices_laptop") !== "" ? get_option("wbb_ocm_devices_laptop") : 0 );
-        $devices_tablet  = ( get_option("wbb_ocm_devices_tablet") !== "" ? get_option("wbb_ocm_devices_tablet") : 0 );
-        $devices_mobile  = ( get_option("wbb_ocm_devices_mobile") !== "" ? get_option("wbb_ocm_devices_mobile") : 1 );
+        $devices_desktop = get_option("wbb_ocm_devices_desktop") != null ? get_option("wbb_ocm_devices_desktop") : 0 ;
+        $devices_laptop  = get_option("wbb_ocm_devices_laptop") != null ? get_option("wbb_ocm_devices_laptop") : 0 ;
+        $devices_tablet  = get_option("wbb_ocm_devices_tablet") != null ? get_option("wbb_ocm_devices_tablet") : 0 ;
+        $devices_mobile  = get_option("wbb_ocm_devices_mobile") != null ? get_option("wbb_ocm_devices_mobile") : 1 ;
 
+        $device = get_option("wbb_ocm_devices_mobile");
+        
 
         include_once plugin_dir_path(__FILE__) . 'partials/wbb-ocm-admin-display.php';
     }
