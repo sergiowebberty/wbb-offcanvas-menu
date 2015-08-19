@@ -185,15 +185,20 @@ class WBB_Off_Canvas_Menu_Public
             $trigger_target = get_option ( "wbb_ocm_css_selector" , true ) ;
             $trigger_icon   = ( get_option ( "wbb_ocm_trigger_icon" ) !== "" ? get_option ( "wbb_ocm_trigger_icon" ) : plugin_dir_url ( __FILE__ ) . "img/trigger_icon1.png" ) ;
 
+            
+            $trigger_target = (get_option("wbb_ocm_css_selector") !== "" ? get_option("wbb_ocm_css_selector") : "wbb-off-canvas" );
 
             ob_start () ;
             include plugin_dir_path ( dirname ( __FILE__ ) ) . "public/partials/trigger-button.php" ;
             $trigger_button = ob_get_clean () ;
+            
+            $trigger_container = "<div class='".$trigger_target."'></div>";
 
             echo json_encode ( array (
                 "trigger_target" => $trigger_target
                 , "trigger_object" => $trigger_button
                 , "sidebar_side"   => $sidebar_side
+                , "trigger_container" => $trigger_container
             ) ) ;
         }
 

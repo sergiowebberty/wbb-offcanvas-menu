@@ -58,8 +58,8 @@
                     if ( data !== null )
                     {
                         $(".wbb-ocm-trigger").remove();
-
-                        $ ( data.trigger_target ).prepend ( data.trigger_object );
+                        $("body").prepend(data.trigger_container);
+                        $ ( "." + data.trigger_target ).prepend ( data.trigger_object );
                         $ ( "body" ).addClass ( data.sidebar_side );
                     }
 

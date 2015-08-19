@@ -209,18 +209,18 @@ class WBB_Off_Canvas_Menu_Admin
         $trigger_background = ( get_theme_mod("wbb_ocm_trigger_background") !== "" ? get_theme_mod("wbb_ocm_trigger_background") : "#321321" );
 
         $menu_name        = get_theme_mod("wbb_ocm_menu_name");
-        $css_selector     = get_option("wbb_ocm_css_selector");
-        $background       = get_option("wbb_ocm_background");
-        $background_hover = get_option("wbb_ocm_background_hover");
-        $borders          = get_option("wbb_ocm_borders");
-        $font_color       = get_option("wbb_ocm_font_color");
-        $font_color_hover = get_option("wbb_ocm_font_color_hover");
+        $css_selector     = (get_option("wbb_ocm_css_selector") !== "" ? get_option("wbb_ocm_css_selector") : ".wbb-off-canvas" );
+        $background       = ( get_option("wbb_ocm_background") !== "" ? get_option("wbb_ocm_background") : "#fff" );
+        $background_hover = ( get_option("wbb_ocm_background_hover") !== "" ? get_option("wbb_ocm_background_hover") : "#fff" );
+        $borders          = ( get_option("wbb_ocm_borders") !== "" ? get_option("wbb_ocm_borders") : "#bbb" );
+        $font_color       = ( get_option("wbb_ocm_font_color") !== "" ? get_option("wbb_ocm_font_color") : "#777" );
+        $font_color_hover = ( get_option("wbb_ocm_font_color_hover") !== "" ? get_option("wbb_ocm_font_color_hover") : "#777" );
         $font_family      = get_option("wbb_ocm_font_family");
 
         $devices_desktop = ( get_option("wbb_ocm_devices_desktop") !== "" ? get_option("wbb_ocm_devices_desktop") : 0 );
         $devices_laptop  = ( get_option("wbb_ocm_devices_laptop") !== "" ? get_option("wbb_ocm_devices_laptop") : 0 );
         $devices_tablet  = ( get_option("wbb_ocm_devices_tablet") !== "" ? get_option("wbb_ocm_devices_tablet") : 0 );
-        $devices_mobile  = ( get_option("wbb_ocm_devices_mobile") !== "" ? get_option("wbb_ocm_devices_mobile") : 0 );
+        $devices_mobile  = ( get_option("wbb_ocm_devices_mobile") !== "" ? get_option("wbb_ocm_devices_mobile") : 1 );
 
 
         include_once plugin_dir_path(__FILE__) . 'partials/wbb-ocm-admin-display.php';
@@ -349,6 +349,11 @@ class WBB_Off_Canvas_Menu_Admin
 
         wp_localize_script($this->plugin_name, 'MyAjax', array(
             'ajaxurl' => admin_url('admin-ajax.php') ));
+        
+        
+         wp_enqueue_script($this->plugin_name . "-transparency", plugin_dir_url(__FILE__) . 'js/wbb-ocm-transparency.js', array(
+            'jquery'), $this->version, false);
+            //'jquery'), $this->version, false);
     }
 
 }

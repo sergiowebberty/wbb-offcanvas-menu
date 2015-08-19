@@ -64,10 +64,19 @@
                 </select>
 
             </label>
+            
+            <label>
+                <p>
+                    <a href="<?php echo admin_url();?>/nav-menus.php?action=edit&menu=0">
+                    <?php _e("Click here to create a new menu", "wbb-offcanvas-menu");?>
+                    </a>
+                </p>
+                
+            </label>
         </div>
         <div class="right-col">
             <label>
-                <span class="info-span"><?php _e("Select the devices screen where the menu will be available", "wbb-offcanvas-menu");?></span>
+                <span class="info-span"><?php _e("Select the device where the menu will be visible", "wbb-offcanvas-menu");?></span>
 
                 <div class="wbb_ocm_device_inputs_container">
 
@@ -96,7 +105,7 @@
 
         <div class="left-col">
             <label>
-                <span class="info-span"><?php _e("Sidebar side", "wbb-offcanvas-menu");?></span>
+                <span class="info-span"><?php _e("Sidebar position", "wbb-offcanvas-menu");?></span>
                 <select name="wbb_ocm_sidebar_side">
                     <option value="left" <?php echo ($sidebar_side === "left" ? "selected" : "") ?>><?php _e("Left", "wbb-offcanvas-menu");?></option>
                     <option value="right" <?php echo ($sidebar_side === "right" ? "selected" : "") ?>><?php _e("Right", "wbb-offcanvas-menu");?></option>
@@ -123,25 +132,25 @@
 
                 <label>
                     <span class="info-span"><?php _e("Background", "wbb-offcanvas-menu");?></span>
-                    <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_background" value="<?php echo $background ?>" >
+                    <input type="text" data-palette="true" class="wbb_ocm_colorpicker pluto-color-control" name="wbb_ocm_background" value="<?php echo $background ?>" >
                 </label>
                 <label>
                     <span class="info-span"><?php _e("Background on mouse over", "wbb-offcanvas-menu");?></span>
-                    <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_background_hover" value="<?php echo $background_hover ?>" >
+                    <input type="text" data-palette="true" class="wbb_ocm_colorpicker pluto-color-control" name="wbb_ocm_background_hover" value="<?php echo $background_hover ?>" >
                 </label>
                 <label>
                     <span class="info-span"><?php _e("Borders", "wbb-offcanvas-menu");?></span>
-                    <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_borders" value="<?php echo $borders ?>" >
+                    <input type="text" data-palette="true" class="wbb_ocm_colorpicker pluto-color-control" name="wbb_ocm_borders" value="<?php echo $borders ?>" >
                 </label>
                 <label>
                     <span class="info-span"><?php _e("Font color", "wbb-offcanvas-menu");?></span>
                     <div class="color-container">
-                        <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_font_color" value="<?php echo $font_color ?>" >
+                        <input type="text" data-palette="true" class="wbb_ocm_colorpicker pluto-color-control" name="wbb_ocm_font_color" value="<?php echo $font_color ?>" >
                     </div>
                 </label>
                 <label>
                     <span class="info-span"><?php _e("Font color on mouse over", "wbb-offcanvas-menu");?></span>
-                    <input type="text" class="wbb_ocm_colorpicker" name="wbb_ocm_font_color_hover" value="<?php echo $font_color_hover ?>" >
+                    <input type="text" data-palette="true" class="wbb_ocm_colorpicker pluto-color-control" name="wbb_ocm_font_color_hover" value="<?php echo $font_color_hover ?>" >
                 </label>
 
             </fieldset>
@@ -157,11 +166,12 @@
 
             <label>
                 <span class="info-span"><?php _e("ID or Class (css selector) where the push menu trigger button will appear.", "wbb-offcanvas-menu");?></span>
-                <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" >
+                <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" placeholder="wbb-off-canvas" >
+                <span>if you want to use a different class then add the classname below</span>
             </label>
 
             <label>
-                <span class="info-span"><?php _e("Trigger button side", "wbb-offcanvas-menu");?></span>
+                <span class="info-span"><?php _e("Button position", "wbb-offcanvas-menu");?></span>
                 <select name="wbb_ocm_trigger_side">
                     <option value="left" <?php echo ($trigger_side === "left" ? "selected" : "") ?>>Left</option>
                     <option value="right" <?php echo ($trigger_side === "right" ? "selected" : "") ?>>Right</option>
@@ -194,7 +204,7 @@
                 <hr>
 
                 <span class="info-span"><?php _e("Trigger button background", "wbb-offcanvas-menu");?></span><br>
-                <input type="text" class="wbb_ocm_colorpicker trigger_background" name="wbb_ocm_trigger_background" value="<?php echo $trigger_background ?>" >
+                <input type="text" data-palette="true" class="wbb_ocm_colorpicker trigger_background pluto-color-control" name="wbb_ocm_trigger_background" value="<?php echo $trigger_background ?>" >
                 
                 <span class="info-span"><?php _e("Icon preview:", "wbb-offcanvas-menu");?></span>
                 <img class="wbb_com_trigger_icon_selected" src="<?php echo $trigger_icon ?>" style="background-color: <?php echo $trigger_background?>">
