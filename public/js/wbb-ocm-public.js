@@ -29,12 +29,13 @@
                     action: "wbb_ocm_return_menu"
                     , screen_size: $(window).width()
                 }
+                , dataType: "json"
                 , success: function(data) {
 
                     if ( $(".wbb-ocm-container").length < 1 )
                     {
 
-                        $("body").prepend(data);
+                        $("body").prepend(data.menu_object).addClass(data.sidebar_side);
 
                         add_style();
                         add_events();
@@ -57,6 +58,7 @@
 
                     if ( data !== null )
                     {
+                        
                         $(".wbb-ocm-trigger").remove();
 
                         var trigger_div = $(data.trigger_target);
@@ -74,7 +76,6 @@
                         }
 
 
-                        $("body").addClass(data.sidebar_side);
                     }
 
                 }
