@@ -81,7 +81,8 @@ class WBB_Off_Canvas_Menu_Admin
         
     }
 
-	/**
+	/** 
+         * Function that add the Settings link in the plugin page
 	 * @param $links
 	 * @param $file
 	 *
@@ -91,7 +92,7 @@ class WBB_Off_Canvas_Menu_Admin
 
         if ( $file == 'wbb-offcanvas-menu/wbb-ocm.php' ) {
             /* Insert the link at the end*/
-            $links['settings'] = sprintf( '<a href="%s"> %s </a>', admin_url( 'themes.php?page=wbb-off-canvas-menu' ), __( 'Settings', 'plugin_domain' ) );
+            $links['settings'] = sprintf( '<a href="%s"> %s </a>', admin_url( 'themes.php?page=wbb-off-canvas-menu' ), __( 'Settings', 'wbb-offcanvas-menu' ) );
         }
         return $links;
 
@@ -118,7 +119,7 @@ class WBB_Off_Canvas_Menu_Admin
             'priority'       => 1190,
             'capability'     => 'edit_theme_options',
             'theme_supports' => '',
-            'title'          => __('Off Canvas Menu', 'textdomain'),
+            'title'          => __('Off Canvas Menu', 'wbb-offcanvas-menu'),
             'description'    => '',
         ));
 
@@ -139,7 +140,7 @@ class WBB_Off_Canvas_Menu_Admin
         }
 
         $control_settings[ "type" ]    = "select";
-        $control_settings[ "label" ]   = "Select the navigation menu:";
+        $control_settings[ "label" ]   = __('Select the navigation menu:', 'wbb-offcanvas-menu');
         $control_settings[ "section" ] = "wbb_ocm_section";
         $control_settings[ "choices" ] = $choices;
 
@@ -156,7 +157,7 @@ class WBB_Off_Canvas_Menu_Admin
         $wp_customize->add_control(
                 'wbb_ocm_sidebar_side', array(
             'type'    => 'select',
-            'label'   => 'Select the sidebar side:',
+            'label'   => __('Select the sidebar side:', 'wbb-offcanvas-menu'),
             'section' => 'wbb_ocm_section',
             'choices' => array(
                 'left'  => 'Left',
@@ -174,7 +175,7 @@ class WBB_Off_Canvas_Menu_Admin
         $wp_customize->add_control(
                 'wbb_ocm_trigger_side', array(
             'type'    => 'select',
-            'label'   => 'Select the trigger button side:',
+            'label'   => __('Select the trigger button side:', 'wbb-offcanvas-menu'),
             'section' => 'wbb_ocm_section',
             'choices' => array(
                 'left'  => 'Left',
@@ -340,14 +341,9 @@ class WBB_Off_Canvas_Menu_Admin
         // Add the color picker css file       
         wp_enqueue_style('wp-color-picker');
 
-        /*
-        // Include our custom jQuery file with WordPress Color Picker dependency
-        wp_enqueue_script('custom-script-handle', plugins_url('custom-script.js', __FILE__), array(
-            'wp-color-picker' ), false, true);
-            */
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wbb-ocm-admin.js', array(
             'jquery', "wp-color-picker" ), $this->version, false);
-            //'jquery'), $this->version, false);
+
 
         wp_localize_script($this->plugin_name, 'MyAjax', array(
             'ajaxurl' => admin_url('admin-ajax.php') ));
@@ -355,7 +351,7 @@ class WBB_Off_Canvas_Menu_Admin
         
          wp_enqueue_script($this->plugin_name . "-transparency", plugin_dir_url(__FILE__) . 'js/wbb-ocm-transparency.js', array(
             'jquery'), $this->version, false);
-            //'jquery'), $this->version, false);
+
     }
 
 }

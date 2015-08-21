@@ -156,6 +156,9 @@
      */
     $ ( document ).on ( "click", ".wbb_ocm_settings_submit", function () {
 
+    var original_text = $(this).text();
+    $(this).text("Updating...");
+
         $.ajax ( {
             method: "POST"
             , url: MyAjax.ajaxurl
@@ -181,9 +184,8 @@
             }
             , success: function ( data ) {
 
-                // TODO: not reload, just update values. 
-                location.reload();
-                
+                $(this).html(original_text);                
+
             }
         } );
 
