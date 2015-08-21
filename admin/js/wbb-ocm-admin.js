@@ -156,41 +156,48 @@
      */
     $ ( document ).on ( "click", ".wbb_ocm_settings_submit", function () {
 
-    var original_text = $(this).text();
-    $(this).text("Updating...");
+        var $this = $(this);
+        
+        var original_text = $this.html();
+        $this.html("Updating...").removeClass("button-primary")
+        
+        
+            $.ajax ( {
+                method: "POST"
+                , url: MyAjax.ajaxurl
+                , data: {
+                    action: "wbb_off_canvas_save_settings"
+                    , wbb_ocm_status: $ ( "input[name='wbb_ocm_status']" ).val ()
+                    , wbb_ocm_sidebar_side: $ ( "select[name='wbb_ocm_sidebar_side']" ).val ()
+                    , wbb_ocm_trigger_side: $ ( "select[name='wbb_ocm_trigger_side']" ).val ()
+                    , wbb_ocm_trigger_icon: $ ( "input[name='wbb_ocm_trigger_icon']" ).val ()
+                    , wbb_ocm_trigger_background: $ ( "input[name='wbb_ocm_trigger_background']" ).val ()
+                    , wbb_ocm_devices_desktop: $ ( "input[name='wbb_ocm_devices_desktop']" ).val ()
+                    , wbb_ocm_devices_laptop: $ ( "input[name='wbb_ocm_devices_laptop']" ).val ()
+                    , wbb_ocm_devices_tablet: $ ( "input[name='wbb_ocm_devices_tablet']" ).val ()
+                    , wbb_ocm_devices_mobile: $ ( "input[name='wbb_ocm_devices_mobile']" ).val ()
+                    , wbb_ocm_menu_name: $ ( "select[name='wbb_ocm_menu_name']" ).val ()
+                    , wbb_ocm_css_selector: $ ( "input[name='wbb_ocm_css_selector']" ).val ()
+                    , wbb_ocm_background: $ ( "input[name='wbb_ocm_background']" ).val ()
+                    , wbb_ocm_background_hover: $ ( "input[name='wbb_ocm_background_hover']" ).val ()
+                    , wbb_ocm_borders: $ ( "input[name='wbb_ocm_borders']" ).val ()
+                    , wbb_ocm_font_color: $ ( "input[name='wbb_ocm_font_color']" ).val ()
+                    , wbb_ocm_font_color_hover: $ ( "input[name='wbb_ocm_font_color_hover']" ).val ()
+                    , wbb_ocm_font_family: $ ( "input[name='wbb_ocm_font_family']" ).val ()
+                }
+                , success: function ( data ) {
 
-        $.ajax ( {
-            method: "POST"
-            , url: MyAjax.ajaxurl
-            , data: {
-                action: "wbb_off_canvas_save_settings"
-                , wbb_ocm_status: $ ( "input[name='wbb_ocm_status']" ).val ()
-                , wbb_ocm_sidebar_side: $ ( "select[name='wbb_ocm_sidebar_side']" ).val ()
-                , wbb_ocm_trigger_side: $ ( "select[name='wbb_ocm_trigger_side']" ).val ()
-                , wbb_ocm_trigger_icon: $ ( "input[name='wbb_ocm_trigger_icon']" ).val ()
-                , wbb_ocm_trigger_background: $ ( "input[name='wbb_ocm_trigger_background']" ).val ()
-                , wbb_ocm_devices_desktop: $ ( "input[name='wbb_ocm_devices_desktop']" ).val ()
-                , wbb_ocm_devices_laptop: $ ( "input[name='wbb_ocm_devices_laptop']" ).val ()
-                , wbb_ocm_devices_tablet: $ ( "input[name='wbb_ocm_devices_tablet']" ).val ()
-                , wbb_ocm_devices_mobile: $ ( "input[name='wbb_ocm_devices_mobile']" ).val ()
-                , wbb_ocm_menu_name: $ ( "select[name='wbb_ocm_menu_name']" ).val ()
-                , wbb_ocm_css_selector: $ ( "input[name='wbb_ocm_css_selector']" ).val ()
-                , wbb_ocm_background: $ ( "input[name='wbb_ocm_background']" ).val ()
-                , wbb_ocm_background_hover: $ ( "input[name='wbb_ocm_background_hover']" ).val ()
-                , wbb_ocm_borders: $ ( "input[name='wbb_ocm_borders']" ).val ()
-                , wbb_ocm_font_color: $ ( "input[name='wbb_ocm_font_color']" ).val ()
-                , wbb_ocm_font_color_hover: $ ( "input[name='wbb_ocm_font_color_hover']" ).val ()
-                , wbb_ocm_font_family: $ ( "input[name='wbb_ocm_font_family']" ).val ()
-            }
-            , success: function ( data ) {
+                    var delay_effect = setInterval(function(){
+                        
+                        $this.html(original_text).addClass("button-primary");
+                        clearInterval( delay_effect );
+                        
+                    },1000);
 
-                $(this).html(original_text);                
 
-            }
+                }
+            } );
+
         } );
-
-    } );
-
-
 
 } ) ( jQuery );
