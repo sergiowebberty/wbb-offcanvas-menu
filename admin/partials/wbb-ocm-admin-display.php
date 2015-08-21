@@ -42,7 +42,7 @@
     </div>
 
 
-    <h3><?php _e( "Menu and devices options", "wbb-offcanvas-menu" ); ?></h3>
+    <h3><?php _e( "General", "wbb-offcanvas-menu" ); ?></h3>
     <div class="wbb_ocm_setting_block">
 
         <div class="left-col">
@@ -98,12 +98,12 @@
     </div>
 
 
-    <h3><?php _e( "Sidebar options", "wbb-offcanvas-menu" ); ?></h3>
+    <h3><?php _e( "Off Canvas Menu", "wbb-offcanvas-menu" ); ?></h3>
     <div class="wbb_ocm_setting_block">
 
         <div class="left-col">
             <label>
-                <span class="info-span"><?php _e( "Sidebar position", "wbb-offcanvas-menu" ); ?></span>
+                <span class="info-span"><?php _e( "Off Canvas Menu position", "wbb-offcanvas-menu" ); ?></span>
                 <select name="wbb_ocm_sidebar_side">
                     <option value="left" <?php echo ($sidebar_side === "left" ? "selected" : "") ?>><?php _e( "Left", "wbb-offcanvas-menu" ); ?></option>
                     <option value="right" <?php echo ($sidebar_side === "right" ? "selected" : "") ?>><?php _e( "Right", "wbb-offcanvas-menu" ); ?></option>
@@ -157,16 +157,17 @@
     </div>
 
 
-    <h3><?php _e( "Trigger button options", "wbb-offcanvas-menu" ); ?></h3>
+    <h3><?php _e( "Menu button", "wbb-offcanvas-menu" ); ?></h3>
     <div class="wbb_ocm_setting_block">
 
         <div class="left-col">
 
             <label>
-                <span class="info-span"><?php _e( "ID or Class (css selector) where the push menu trigger button will appear.", "wbb-offcanvas-menu" ); ?></span>
+                
+                <span class="info-span"><?php _e( "As default the menu button wil be shown in the body. if you want to use a different selector then add it below. Use ID or Class (css selector) where the push menu trigger button will appear.", "wbb-offcanvas-menu" ); ?></span>
                 <span class="alert_error"> <?php _e( "This selector doesn't exists", "wbb-offcanvas-menu" ); ?> </span>
-                <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" placeholder="wbb-off-canvas" > 
-                <span>if you want to use a different class then add the classname below</span>
+                <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" placeholder=".class or #id" > 
+                
             </label>
 
             <label>
@@ -180,7 +181,7 @@
         <div class="right-col">
             <label>
 
-                <span class="info-span"><?php _e( "Select the trigger button icon", "wbb-offcanvas-menu" ); ?></span>
+                <span class="info-span"><?php _e( "Select the menu button icon", "wbb-offcanvas-menu" ); ?></span>
 
                 <input type="hidden" name="wbb_ocm_trigger_icon" value="<?php echo $trigger_icon ?>" />
 
@@ -202,7 +203,7 @@
 
                 <hr>
 
-                <span class="info-span"><?php _e( "Trigger button background", "wbb-offcanvas-menu" ); ?></span><br>
+                <span class="info-span"><?php _e( "Menu button background", "wbb-offcanvas-menu" ); ?></span><br>
                 <input type="text" data-palette="true" class="wbb_ocm_colorpicker trigger_background pluto-color-control" name="wbb_ocm_trigger_background" value="<?php echo $trigger_background ?>" >
 
                 <span class="info-span"><?php _e( "Icon preview:", "wbb-offcanvas-menu" ); ?></span>
