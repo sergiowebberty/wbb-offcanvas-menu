@@ -166,7 +166,8 @@
 
             <label>
                 <span class="info-span"><?php _e("ID or Class (css selector) where the push menu trigger button will appear.", "wbb-offcanvas-menu");?></span>
-                <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" placeholder="wbb-off-canvas" >
+                <span class="alert_error" style="display: none;"> <?php _e("This selector doesnt exists","wbb-offcanvas-menu");?> </span>
+                <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" placeholder="wbb-off-canvas" > 
                 <span>if you want to use a different class then add the classname below</span>
             </label>
 
@@ -222,4 +223,8 @@
 </div>
 
 <iframe id="wbb_ocm_iframe_font_family" src="<?php echo bloginfo ( "url" ) ?>">
+</iframe>
+
+
+<iframe id="wbb_ocm_iframe_load_home" src="<?php echo bloginfo ( "url" ) ?>" style="display: none;">
 </iframe>

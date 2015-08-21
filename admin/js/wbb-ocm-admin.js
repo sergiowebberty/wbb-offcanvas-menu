@@ -194,7 +194,7 @@
 
                 var trigger_div = $("#wbb_ocm_iframe_load_home").contents().find(trigger_selector).length
 
-                if (trigger_div == 0) {
+                if (trigger_div == 0 && trigger_selector != "") {
 
                     $(".alert_error").show();
                 }
