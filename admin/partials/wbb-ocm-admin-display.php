@@ -35,7 +35,6 @@
 
         <div class="wbb_ocm_status_result wbb_ocm_status_result_deactivated" style="display: none;"><?php echo __( "deactivated", "wbb-offcanvas-menu" ); ?></div>
 
-<!--        <div class="wbb_ocm_status_result"><?php echo ( $ocm_status === "activated" ? __( "activated", "wbb-offcanvas-menu" ) : __( "deactivated", "wbb-offcanvas-menu" ) ); ?></div>-->
         <br>
         <small><?php _e( "The admins always will see the menu, to check the style before activate.", "wbb-offcanvas-menu" ); ?></small>
         <input type="hidden" name="wbb_ocm_status" value="<?php echo $ocm_status ?>" />
@@ -55,10 +54,9 @@
                     $menus = get_terms( 'nav_menu', array (
                         'hide_empty' => false) );
 
-                    foreach ( $menus as $menu )
-                    {
+                    foreach ( $menus as $menu ) :
                         echo ( $menu->name === $menu_name ? "<option value='$menu->name' selected>$menu->name</option>" : "<option value='$menu->name'>$menu->name</option>" );
-                    }
+                    endforeach;
                     ?>
 
                 </select>
@@ -166,7 +164,7 @@
 
             <label>
                 <span class="info-span"><?php _e( "ID or Class (css selector) where the push menu trigger button will appear.", "wbb-offcanvas-menu" ); ?></span>
-                <span class="alert_error" style="display: none;"> <?php _e( "This selector doesnt exists", "wbb-offcanvas-menu" ); ?> </span>
+                <span class="alert_error"> <?php _e( "This selector doesn't exists", "wbb-offcanvas-menu" ); ?> </span>
                 <input type="text" name="wbb_ocm_css_selector" value="<?php echo $css_selector ?>" placeholder="wbb-off-canvas" > 
                 <span>if you want to use a different class then add the classname below</span>
             </label>
@@ -222,9 +220,5 @@
 
 </div>
 
-<iframe id="wbb_ocm_iframe_font_family" src="<?php echo bloginfo( "url" ) ?>">
-</iframe>
-
-
-<iframe id="wbb_ocm_iframe_load_home" src="<?php echo bloginfo( "url" ) ?>" style="display: none;">
+<iframe id="wbb_ocm_iframe" src="<?php echo bloginfo( "url" ) ?>" style="display: none;">
 </iframe>

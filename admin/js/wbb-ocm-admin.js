@@ -42,12 +42,12 @@
         });
 
 
-        $("#wbb_ocm_iframe_font_family").load(function() {
+        $("#wbb_ocm_iframe").load(function() {
 
             var body_font_family = $(this).contents().find("body").css("font-family");
 
             $(".wbb_com_font_family_item").first().find("span").css("font-family", body_font_family);
-            $(this).remove();
+            
 
         });
 
@@ -189,7 +189,7 @@
             , success: function() {
 
                 var trigger_selector = $("input[name='wbb_ocm_css_selector']").val();
-                var trigger_div = $("#wbb_ocm_iframe_load_home").contents().find(trigger_selector).length;
+                var trigger_div = $("#wbb_ocm_iframe").contents().find(trigger_selector).length;
 
                 if ( trigger_div == 0 && trigger_selector != "" ) {
 

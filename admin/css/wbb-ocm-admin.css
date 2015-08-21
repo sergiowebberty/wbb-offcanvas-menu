@@ -291,8 +291,8 @@
 }
 
 .pluto-alpha-container {
-    box-sizing:padding-box;
-    display:none;
+    box-sizing: padding-box;
+    display :none;
     border:1px solid #dfdfdf;
     border-top:none;
     background:#FFF;
@@ -301,4 +301,11 @@
 
 .customize-control-alphacolor .wp-picker-container .iris-picker {
     border-bottom:none;
+}
+
+
+.alert_error{
+    display: none;
+    color: #990000;
+    font-weight: bold;
 }
