@@ -20,17 +20,19 @@
  * @subpackage WBB_Off_Canvas_Menu/includes
  * @author     Webberty <info@webberty.com>
  */
-class WBB_Off_Canvas_Menu_Deactivator {
+class WBB_Off_Canvas_Menu_Deactivator
+{
 
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function deactivate() {
-
-	}
+    /**
+     * Short Description. (use period)
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function deactivate()
+    {
+        
+    }
 
 }

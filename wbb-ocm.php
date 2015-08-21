@@ -24,28 +24,30 @@
  * Text Domain:       wbb-offcanvas-menu
  * Domain Path:       /languages
  */
-
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if ( !defined( 'WPINC' ) )
+{
+    die;
 }
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wbb-ocm-activator.php
  */
-function activate_wbb_push_menu() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wbb-ocm-activator.php';
-	WBB_Off_Canvas_Menu_Activator::activate();
+function activate_wbb_push_menu()
+{
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-wbb-ocm-activator.php';
+    WBB_Off_Canvas_Menu_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wbb-ocm-deactivator.php
  */
-function deactivate_wbb_push_menu() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wbb-ocm-deactivator.php';
-	WBB_Off_Canvas_Menu_Deactivator::deactivate();
+function deactivate_wbb_push_menu()
+{
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-wbb-ocm-deactivator.php';
+    WBB_Off_Canvas_Menu_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_wbb_push_menu' );
@@ -66,10 +68,11 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wbb-ocm.php';
  *
  * @since    1.0.0
  */
-function run_wbb_push_menu() {
+function run_wbb_push_menu()
+{
 
-	$plugin = new WBB_Off_Canvas_Menu();
-	$plugin->run();
-
+    $plugin = new WBB_Off_Canvas_Menu();
+    $plugin->run();
 }
+
 run_wbb_push_menu();
