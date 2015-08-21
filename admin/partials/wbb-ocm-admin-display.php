@@ -53,7 +53,7 @@
                     <?php
                     $menus = get_terms( 'nav_menu', array (
                         'hide_empty' => false) );
-
+                    
                     foreach ( $menus as $menu ) :
                         echo ( $menu->name === $menu_name ? "<option value='$menu->name' selected>$menu->name</option>" : "<option value='$menu->name'>$menu->name</option>" );
                     endforeach;
@@ -220,5 +220,5 @@
 
 </div>
 
-<iframe id="wbb_ocm_iframe" src="<?php echo bloginfo( "url" ) ?>" style="display: none;">
+<iframe id="wbb_ocm_iframe" src="<?php echo bloginfo( "url" ) ?>">
 </iframe>

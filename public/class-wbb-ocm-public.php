@@ -138,6 +138,7 @@ class WBB_Off_Canvas_Menu_Public
             {
 
                 $sidebar_side = ( get_theme_mod( "wbb_ocm_sidebar_side" ) !== "" ? get_theme_mod( "wbb_ocm_sidebar_side" ) : "left" );
+                
                 ?>
 
                 <div class="wbb-ocm-container <?php echo $sidebar_side ?>">
@@ -185,8 +186,6 @@ class WBB_Off_Canvas_Menu_Public
 
 
             $trigger_target = (get_option( "wbb_ocm_css_selector" ) !== "" ? get_option( "wbb_ocm_css_selector" ) : "" );
-
-
 
             ob_start();
             include plugin_dir_path( dirname( __FILE__ ) ) . "public/partials/trigger-button.php";
@@ -259,20 +258,15 @@ class WBB_Off_Canvas_Menu_Public
     public function wbb_ocm_add_style()
     {
         echo json_encode( array (
-            "wbb_ocm_background" => get_option( "wbb_ocm_background" )
-            ,
-            "wbb_ocm_background_hover" => get_option( "wbb_ocm_background_hover" )
-            ,
-            "wbb_ocm_borders" => get_option( "wbb_ocm_borders" )
-            ,
-            "wbb_ocm_font_color" => get_option( "wbb_ocm_font_color" )
-            ,
-            "wbb_ocm_font_color_hover" => get_option( "wbb_ocm_font_color_hover" )
-            ,
-            "wbb_ocm_font_family" => get_option( "wbb_ocm_font_family" )
-            ,
-            "wbb_ocm_trigger_background" => ( get_theme_mod( "wbb_ocm_trigger_background" ) !== "" ? get_theme_mod( "wbb_ocm_trigger_background" ) : "#321321" )
+            "wbb_ocm_background"            => get_option( "wbb_ocm_background" )
+            , "wbb_ocm_background_hover"    => get_option( "wbb_ocm_background_hover" )
+            , "wbb_ocm_borders"             => get_option( "wbb_ocm_borders" )
+            , "wbb_ocm_font_color"          => get_option( "wbb_ocm_font_color" )
+            , "wbb_ocm_font_color_hover"    => get_option( "wbb_ocm_font_color_hover" )
+            , "wbb_ocm_font_family"         => get_option( "wbb_ocm_font_family" )
+            , "wbb_ocm_trigger_background"  => ( get_theme_mod( "wbb_ocm_trigger_background" ) !== "" ? get_theme_mod( "wbb_ocm_trigger_background" ) : "#321321" )
         ) );
+        
         die();
     }
 
