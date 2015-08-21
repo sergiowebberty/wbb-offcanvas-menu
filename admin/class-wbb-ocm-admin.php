@@ -145,31 +145,31 @@ class WBB_Off_Canvas_Menu_Admin
 
         $wp_customize->add_control(
                 'wbb_ocm_sidebar_side', array (
-            'type' => 'select',
-            'label' => __( 'Select the sidebar side:', 'wbb-offcanvas-menu' ),
-            'section' => 'wbb_ocm_section',
-            'choices' => array (
-                'left' => 'Left',
-                'right' => 'Right'
-            ),
+                          'type'    => 'select'
+                        , 'label'   => __( 'Select the sidebar side:', 'wbb-offcanvas-menu' )
+                        ,'section'  => 'wbb_ocm_section'
+                        ,'choices'  => array (
+                              'left'    => 'Left'
+                            , 'right'   => 'Right'
+                        ),
                 )
         );
 
         $wp_customize->add_setting(
                 'wbb_ocm_trigger_side', array (
-            'default' => 'left',
+                        'default' => 'left'
                 )
         );
 
         $wp_customize->add_control(
                 'wbb_ocm_trigger_side', array (
-            'type' => 'select',
-            'label' => __( 'Select the trigger button side:', 'wbb-offcanvas-menu' ),
-            'section' => 'wbb_ocm_section',
-            'choices' => array (
-                'left' => 'Left',
-                'right' => 'Right'
-            ),
+                          'type'    => 'select'
+                        , 'label'   => __( 'Select the trigger button side:', 'wbb-offcanvas-menu' )
+                        , 'section' => 'wbb_ocm_section'
+                        , 'choices' => array (
+                              'left'    => 'Left'
+                            , 'right'   => 'Right'
+                        ),
                 )
         );
     }
@@ -214,8 +214,8 @@ class WBB_Off_Canvas_Menu_Admin
 
         $device = get_option( "wbb_ocm_devices_mobile" );
 
-
         include_once plugin_dir_path( __FILE__ ) . 'partials/wbb-ocm-admin-display.php';
+        
     }
 
     /**
@@ -244,7 +244,6 @@ class WBB_Off_Canvas_Menu_Admin
         {
             update_option( "wbb_ocm_trigger_icon", $_POST["wbb_ocm_trigger_icon"] );
         }
-
 
         if ( isset( $_POST["wbb_ocm_devices_desktop"] ) )
         {

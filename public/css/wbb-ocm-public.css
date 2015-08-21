@@ -1,9 +1,31 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
 
-.wbb-ocm-container
+/* *****************************************************************************
+ BODY
+ * ****************************************************************************/
+
+body{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+    transition: 0.25s ease-in-out;
+}
+
+body.left.active{
+    margin-left: 250px;
+    margin-right: -250px;
+}
+body.right.active{
+    margin-left: -250px;
+    margin-right: 250px;
+}
+
+/* *****************************************************************************
+ WBB OCM CONTAINER
+ * ****************************************************************************/
+
+
+  .wbb-ocm-container
 , .wbb-ocm-submenu
 {
 
@@ -26,14 +48,12 @@
 
 }
 
-
 .wbb-ocm-container.left{
     left: -250px;
 }
 .wbb-ocm-container.right{
     right: -250px;
 }
-
 
 .wbb-ocm-container.left.active{
     left: 0px;
@@ -64,41 +84,30 @@
 }
 
 
-
-/*
-    
-*/
-body{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-
-    transition: 0.25s ease-in-out;
-}
-
-body.left.active{
-    margin-left: 250px;
-    margin-right: -250px;
-}
-body.right.active{
-    margin-left: -250px;
-    margin-right: 250px;
-}
+/* *****************************************************************************
+ TRIGGER BUTTON
+ * ****************************************************************************/
 
 .wbb-ocm-trigger{
 
     width: 50px;
     height: 50px;
 
+    padding: 5px;
+    
     cursor: pointer;
 
 }
+
+.wbb-ocm-trigger img{
+    width: 100%;
+    height: 100%;
+}
+
 .wbb-ocm-trigger.right{
     float: right;
 }
 
-
-/* Close button */
 .wbb-ocm-main-title{
     color: #FFFFFF;
     cursor: pointer;
@@ -115,14 +124,7 @@ body.right.active{
     float: right;
 }
 
-/* LISTS */
-
-.wbb-ocm-container menu menuitem menu{
-    display: none;
-}
-
-
-.wbb-ocm-submenu menu menuitem menu{
+.wbb-ocm-container menu menuitem menu, .wbb-ocm-submenu menu menuitem menu{
     display: none;
 }
 
@@ -150,20 +152,4 @@ menuitem{
     color: #fff;
 
     border-bottom: 1px solid;
-}
-
-
-
-/*
-TRIGGER BUTTON
-*/
-.wbb-ocm-trigger{
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-
-}
-.wbb-ocm-trigger img{
-    width: 100%;
-    height: 100%;
 }

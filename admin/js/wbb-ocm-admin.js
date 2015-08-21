@@ -186,8 +186,7 @@
                 , wbb_ocm_font_color_hover: $("input[name='wbb_ocm_font_color_hover']").val()
                 , wbb_ocm_font_family: $("input[name='wbb_ocm_font_family']").val()
             }
-            , success: function(data) {
-
+            , success: function() {
 
                 var trigger_selector = $("input[name='wbb_ocm_css_selector']").val();
                 var trigger_div = $("#wbb_ocm_iframe_load_home").contents().find(trigger_selector).length;
