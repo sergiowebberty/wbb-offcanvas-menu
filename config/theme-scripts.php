@@ -18,26 +18,25 @@ function wbb_wp_enqueue_scripts ()
 {
 
 	// Styles
+	wp_enqueue_style ( 'general-css' , '' . get_template_directory_uri () . '/assets/styles/general.css' , array () , '1.0.0' , 'all' );
+        
+	// Scripts
 	wp_enqueue_script ( 'modernizr' , '' . get_template_directory_uri () . '/assets/scripts/vendor/modernizr.js' , array ( 'jquery' ) , NULL , FALSE );
 	wp_enqueue_script ( 'menu-navigation' , '' . get_template_directory_uri () . '/assets/scripts/vendor/navigation.js' , array ( 'jquery' ) , NULL , FALSE );
+        
+            // FrontEnd Scripts
+            wp_enqueue_script ( 'main-frontend-script' , '' . get_template_directory_uri () . '/assets/scripts/frontend/main-frontend-script.js' , array ( 'jquery' ) , NULL , FALSE );
+        
 
-	// Scripts
-	wp_enqueue_style ( 'general-css' , '' . get_template_directory_uri () . '/assets/styles/general.css' , array () , '1.0.0' , 'all' );
 
 }
 
 
-add_action ( 'admin_enqueue_scripts' , 'wbb_theme_add_color_picker' );
-function wbb_theme_add_color_picker ( $hook )
+add_action ( 'admin_enqueue_scripts' , 'wbb_theme_admin_scripts' );
+function wbb_theme_admin_scripts ( $hook )
 {
-
-	if ( is_admin () )
-	{
-
-		// Add the color picker css file
-		wp_enqueue_style ( 'wp-color-picker' );
-
-		// Include our custom jQuery file with WordPress Color Picker dependency
-		wp_enqueue_script ( 'custom-script-handle' , '' . get_template_directory_uri () . '/assets/scripts/vendor/wbb-theme-script.js' , array ( 'wp-color-picker' ) , FALSE , TRUE );
-	}
+        
+    // Admin Scripts
+    wp_enqueue_script ( 'main-backend-script' , '' . get_template_directory_uri () . '/assets/scripts/backend/main-backend-script.js' , array ( 'jquery' ) , NULL , FALSE );
+    
 }
