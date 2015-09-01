@@ -1,10 +1,10 @@
-=== wbb-offcanvas-menu ===
+=== Wbb Off-canvas - Responsive menu ===
  
-Contributors: https://wordpress.org/support/profile/webberty
-Donate link: http://example.com/
+Contributors: webberty
+Donate link: https://pledgie.com/campaigns/30022
 Tags: menu, responsive, off-canvas, hamburger, easy, simple, hidden, push, configurable, mobile, tablet, 3 line, 3 lines, mobile menu, responsive menu, tablet, tablet menu, three line, three lines, WordPress responsive menu, wp responsive menu, plugin, menu plugin, responsive plugin,  navigation, customization, simple, dynamic
 Requires at least: 3.8
-Tested up to: 4.0
+Tested up to: 4.3
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,9 +20,9 @@ Style the menu by changing colours of backgrounds, borders, text, mouse hover yo
  
 Responsive: Select the device where to show the off-canvas menu. There are several devices where you can select from like desktop, laptop, tablet and mobile. The mobile device is by default selected.
  
-Positioning: Configure easily the position of the menu button. You have also the choice of side to slide in from (left /right side of your webpage).
+Positioning: Configure easily the position of the menu button. You have also the choice of side to slide in from (left /right side of your web page).
  
-With the WordPress customize you see the off-canvas menu live in action when customizing position and style.
+With the WordPress customizer you see the off-canvas menu live in action when customizing position and style.
  
  
 == Settings ==
@@ -73,9 +73,9 @@ There is a library of existing icons that can be customized or used directly. If
  
 == Installation ==
  
-There are several ways to install the wbb-offcanvas-menu plugin.
+There are several ways to install the Wbb off-canvas plugin.
 
-In Wordpress under the plugin menu > “add new” section you can find different options to add the wbb-offcanvas-menu plugin.
+In Wordpress under the plugin menu > “add new” section you can find different options to add the Wbb off-canvas plugin.
  
 1.  Using the WordPress Plugin Directory
 
@@ -99,7 +99,10 @@ ID selector is declared using a hash, or pound symbol “#”. Just as is the ca
  
 == Screenshots ==
  
-
+1. Admin interface in WordPress style.
+2. Select the devices where the menu will be visible.
+3. Pick colors for all elements.
+4. Choose a default button or upload your own.
  
 == Changelog ==
  
@@ -108,18 +111,12 @@ ID selector is declared using a hash, or pound symbol “#”. Just as is the ca
  
  
 == Upgrade Notice ==
- 
-= 1.0 =
- 
-If you want it install it!
- 
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
- 
+
 == Additional Info ==
  
 = More =
  
-[Webberty](http://www.webberty.com/plugins)
+[Webberty](http://www.webberty.com/)
  
  
 
