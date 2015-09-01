@@ -22,7 +22,6 @@ function wbb_wp_enqueue_scripts ()
         
 	// Scripts
 	wp_enqueue_script ( 'modernizr' , '' . get_template_directory_uri () . '/assets/scripts/vendor/modernizr.js' , array ( 'jquery' ) , NULL , FALSE );
-	wp_enqueue_script ( 'menu-navigation' , '' . get_template_directory_uri () . '/assets/scripts/vendor/navigation.js' , array ( 'jquery' ) , NULL , FALSE );
         
             // FrontEnd Scripts
             wp_enqueue_script ( 'main-frontend-script' , '' . get_template_directory_uri () . '/assets/scripts/frontend/main-frontend-script.js' , array ( 'jquery' ) , NULL , FALSE );
