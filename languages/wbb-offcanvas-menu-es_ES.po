@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wbb-offcanvasmenu-plugin\n"
+"POT-Creation-Date: 2015-08-18 17:02+0200\n"
+"PO-Revision-Date: 2015-08-18 17:03+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-wbb-ocm-admin.php:94
+msgid "Settings"
+msgstr "Configuración"
+
+#: admin/class-wbb-ocm-admin.php:121
+msgid "Off Canvas Menu"
+msgstr "Off Canvas Menu"
+
+#: admin/partials/wbb-ocm-admin-display.php:22
+msgid "Status"
+msgstr "Estado"
+
+#: admin/partials/wbb-ocm-admin-display.php:27
+msgid "On"
+msgstr "On"
+
+#: admin/partials/wbb-ocm-admin-display.php:28
+msgid "Off"
+msgstr "Off"
+
+#: admin/partials/wbb-ocm-admin-display.php:34
+#: admin/partials/wbb-ocm-admin-display.php:38
+msgid "activated"
+msgstr "activado"
+
+#: admin/partials/wbb-ocm-admin-display.php:36
+#: admin/partials/wbb-ocm-admin-display.php:38
+msgid "deactivated"
+msgstr "desactivado"
+
+#: admin/partials/wbb-ocm-admin-display.php:40
+msgid ""
+"The admins always will see the menu, to check the style before activate."
+msgstr ""
+"Los administradores siempre podrán ver el menú, para comprobar el estilo "
+"antes de activar."
+
+#: admin/partials/wbb-ocm-admin-display.php:46
+msgid "Menu and devices options"
+msgstr "Menú y opciones de dispositivo"
+
+#: admin/partials/wbb-ocm-admin-display.php:51
+msgid "Menu Name"
+msgstr "Nombre del menú"
+
+#: admin/partials/wbb-ocm-admin-display.php:70
+msgid "Select the device where the menu will be visible"
+msgstr "Seleccione el dispositivo donde será visible el menú"
+
+#: admin/partials/wbb-ocm-admin-display.php:94
+msgid "Sidebar options"
+msgstr "Opciones de la Barra lateral:"
+
+#: admin/partials/wbb-ocm-admin-display.php:99
+msgid "Sidebar position"
+msgstr "Posición del la barra lateral"
+
+#: admin/partials/wbb-ocm-admin-display.php:101
+msgid "Left"
+msgstr "Izquierda"
+
+#: admin/partials/wbb-ocm-admin-display.php:102
+msgid "Right"
+msgstr "Derecha"
+
+#: admin/partials/wbb-ocm-admin-display.php:107
+msgid "Select Font Family"
+msgstr "Seleccionar fuente"
+
+#: admin/partials/wbb-ocm-admin-display.php:125
+msgid "Background"
+msgstr "Fondo"
+
+#: admin/partials/wbb-ocm-admin-display.php:129
+msgid "Background on mouse over"
+msgstr "Fondo en mouse over"
+
+#: admin/partials/wbb-ocm-admin-display.php:133
+msgid "Borders"
+msgstr "Bordes"
+
+#: admin/partials/wbb-ocm-admin-display.php:137
+msgid "Font color"
+msgstr "Color de la fuente"
+
+#: admin/partials/wbb-ocm-admin-display.php:143
+msgid "Font color on mouse over"
+msgstr "Color de la fuente en mouse over"
+
+#: admin/partials/wbb-ocm-admin-display.php:153
+msgid "Trigger button options"
+msgstr "Opciones del botón lanzador"
+
+#: admin/partials/wbb-ocm-admin-display.php:159
+msgid ""
+"ID or Class (css selector) where the push menu trigger button will appear."
+msgstr "ID o clase (selector css)  donde el botón lanzador aparecerá"
+
+#: admin/partials/wbb-ocm-admin-display.php:164
+msgid "Button position"
+msgstr "Posición del botón"
+
+#: admin/partials/wbb-ocm-admin-display.php:174
+msgid "Select the trigger button icon"
+msgstr "Seleccione el icono del botón lanzador"
+
+#: admin/partials/wbb-ocm-admin-display.php:192
+msgid "Upload your icon"
+msgstr "Suba su icono"
+
+#: admin/partials/wbb-ocm-admin-display.php:196
+msgid "Trigger button background"
+msgstr "Color de fondo del lanzador"
+
+#: admin/partials/wbb-ocm-admin-display.php:199
+msgid "Icon preview:"
+msgstr "Vista previa del icono"
+
+#: admin/partials/wbb-ocm-admin-display.php:210
+msgid "Update"
+msgstr "Actualizar"
+
+#~ msgid "Select the devices screen where the menu will be available"
+#~ msgstr ""
+#~ "Seleccione la pantalla de los dispositivos donde el menú estará disponible"
+
+#~ msgid "Sidebar side"
+#~ msgstr "Lado donde aparecerá la barra lateral"
+
+#~ msgid "Trigger button side"
+#~ msgstr "Lado en el que aparecerá el botón lanzador"
