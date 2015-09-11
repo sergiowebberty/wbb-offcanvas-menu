@@ -1,0 +1,76 @@
+@import "../neat/neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
+// Neat Overrides
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+// $max-width: 1200px;
+
+body {
+  //max-width: $max-width;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.site-container{
+  @include media($mobile) {
+    padding: 0 2em;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  @include media($tablet) {
+    padding: 0 2em;
+  }
+  @include media($desktop) {
+
+    padding:0 0 0 0;
+  }
+}
+
+header {
+  @include fill-parent();
+
+}
+
+.main-container {
+
+  @include outer-container;
+  display: inline-block;
+
+  main {
+
+    @include media($mobile) {
+      @include fill-parent();
+    }
+
+    @include media($tablet) {
+      @include span-columns(8);
+    }
+    @include media($desktop) {
+      @include span-columns(8);
+    }
+
+  }
+
+  aside {
+
+    @include media($mobile) {
+      @include fill-parent();
+    }
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+    @include media($desktop) {
+      @include span-columns(4);
+    }
+  }
+
+}
+
+footer {
+
+  @include fill-parent();
+
+}

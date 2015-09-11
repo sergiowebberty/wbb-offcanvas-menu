@@ -1,0 +1,149 @@
+@import "../grid/span-columns";
+
+$gutter-status: 0.8em !default;
+$gutter-none: 0em !important;
+
+//$column-status: 1em !default;
+//$column-gutter-none: 100em !important;
+
+@mixin gutter-size($gutter-status) {
+
+  @if $gutter-status == $gutter-none {
+    margin-right: $gutter-none;
+  }
+}
+
+/*@mixin column-width($column-status){
+
+  @if $column-status == $column-gutter-none{
+    $column-status: $column-gutter-none;
+  }
+}*/
+
+/*------------------------------------------------------------------
+
+                              =======================[ GUTTER-NONE ]
+
+-------------------------------------------------------------------*/
+
+section {
+  &.gutter-none > div {
+    @include gutter-size($gutter-none);
+
+    &.l-1, &.m-1, &.s-1,
+    &.l-2, &.m-2, &.s-2,
+    &.l-3, &.m-3, &.s-3,
+    &.l-4, &.m-4, &.s-4,
+    &.l-5, &.m-5, &.s-5,
+    &.l-6, &.m-6, &.s-6,
+    &.l-7, &.m-7, &.s-7,
+    &.l-8, &.m-8, &.s-8,
+    &.l-9, &.m-9, &.s-9,
+    &.l-10, &.m-10, &.s-10,
+    &.l-11, &.m-11, &.s-11,
+    &.l-12, &.m-12, &.s-12 {
+      @media only screen and (min-width: 320px) {
+        width: 100%;
+      }
+      @media only screen and (min-width: 480px) {
+        width: 50%;
+      }
+    }
+
+    &.s-1,
+    &.m-1,
+    &.l-1 {
+      @media only screen and (min-width: 768px) {
+        width: calc(8.333% - 0.01%);
+      }
+    }
+
+    &.s-2,
+    &.m-2,
+    &.l-2 {
+      @media only screen and (min-width: 768px) {
+        width: calc(16.668% - 0.01%);
+      }
+    }
+
+    &.s-3,
+    &.m-3,
+    &.l-3 {
+      @media only screen and (min-width: 768px) {
+        width: calc(25% - 0.01%);
+      }
+    }
+
+    &.s-4,
+    &.m-4,
+    &.l-4 {
+      @media only screen and (min-width: 768px) {
+        width: calc(33.33% - 0.01%);
+      }
+    }
+
+    &.s-5,
+    &.m-5,
+    &.l-6 {
+      @media only screen and (min-width: 768px) {
+        width: calc(41.675% - 0.01%);
+      }
+    }
+
+    &.s-6,
+    &.m-6,
+    &.l-6 {
+      @media only screen and (min-width: 768px) {
+        width: calc(50% - 0.01%);
+      }
+    }
+
+    &.s-7,
+    &.m-7,
+    &.l-7 {
+      @media only screen and (min-width: 768px) {
+        width: calc(58.318% - 0.01%);
+      }
+    }
+
+    &.s-8,
+    &.m-8,
+    &.l-8 {
+      @media only screen and (min-width: 768px) {
+        width: calc(66.6544% - 0.01%);
+      }
+    }
+
+    &.s-9,
+    &.m-9,
+    &.l-9 {
+      @media only screen and (min-width: 768px) {
+        width: calc(74.9908% - 0.01%);
+      }
+    }
+
+    &.s-10,
+    &.m-10,
+    &.l-10 {
+      @media only screen and (min-width: 768px) {
+        width: calc(83.3272% - 0.01%);
+      }
+    }
+
+    &.s-11,
+    &.m-11,
+    &.l-11 {
+      @media only screen and (min-width: 768px) {
+        width: calc(91.6636% - 0.01%);
+      }
+    }
+
+    &.s-12,
+    &.m-12,
+    &.l-12 {
+      @media only screen and (min-width: 768px) {
+        width: calc(100% - 0.01%);
+      }
+    }
+  }
+}

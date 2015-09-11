@@ -1,0 +1,100 @@
+/*@mixin column-width($column-status){
+
+  @if $column-status == $column-gutter-none{
+    $column-status: $column-gutter-none;
+  }
+}*/
+/*------------------------------------------------------------------
+
+                              =======================[ GUTTER-NONE ]
+
+-------------------------------------------------------------------*/
+section.gutter-none > div {
+    margin-right: 0em !important;
+}
+
+@media only screen and (min-width: 320px) {
+    section.gutter-none > div.l-1, section.gutter-none > div.m-1, section.gutter-none > div.s-1, section.gutter-none > div.l-2, section.gutter-none > div.m-2, section.gutter-none > div.s-2, section.gutter-none > div.l-3, section.gutter-none > div.m-3, section.gutter-none > div.s-3, section.gutter-none > div.l-4, section.gutter-none > div.m-4, section.gutter-none > div.s-4, section.gutter-none > div.l-5, section.gutter-none > div.m-5, section.gutter-none > div.s-5, section.gutter-none > div.l-6, section.gutter-none > div.m-6, section.gutter-none > div.s-6, section.gutter-none > div.l-7, section.gutter-none > div.m-7, section.gutter-none > div.s-7, section.gutter-none > div.l-8, section.gutter-none > div.m-8, section.gutter-none > div.s-8, section.gutter-none > div.l-9, section.gutter-none > div.m-9, section.gutter-none > div.s-9, section.gutter-none > div.l-10, section.gutter-none > div.m-10, section.gutter-none > div.s-10, section.gutter-none > div.l-11, section.gutter-none > div.m-11, section.gutter-none > div.s-11, section.gutter-none > div.l-12, section.gutter-none > div.m-12, section.gutter-none > div.s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    section.gutter-none > div.l-1, section.gutter-none > div.m-1, section.gutter-none > div.s-1, section.gutter-none > div.l-2, section.gutter-none > div.m-2, section.gutter-none > div.s-2, section.gutter-none > div.l-3, section.gutter-none > div.m-3, section.gutter-none > div.s-3, section.gutter-none > div.l-4, section.gutter-none > div.m-4, section.gutter-none > div.s-4, section.gutter-none > div.l-5, section.gutter-none > div.m-5, section.gutter-none > div.s-5, section.gutter-none > div.l-6, section.gutter-none > div.m-6, section.gutter-none > div.s-6, section.gutter-none > div.l-7, section.gutter-none > div.m-7, section.gutter-none > div.s-7, section.gutter-none > div.l-8, section.gutter-none > div.m-8, section.gutter-none > div.s-8, section.gutter-none > div.l-9, section.gutter-none > div.m-9, section.gutter-none > div.s-9, section.gutter-none > div.l-10, section.gutter-none > div.m-10, section.gutter-none > div.s-10, section.gutter-none > div.l-11, section.gutter-none > div.m-11, section.gutter-none > div.s-11, section.gutter-none > div.l-12, section.gutter-none > div.m-12, section.gutter-none > div.s-12 {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-1, section.gutter-none > div.m-1, section.gutter-none > div.l-1 {
+        width: calc(8.333% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-2, section.gutter-none > div.m-2, section.gutter-none > div.l-2 {
+        width: calc(16.668% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-3, section.gutter-none > div.m-3, section.gutter-none > div.l-3 {
+        width: calc(25% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-4, section.gutter-none > div.m-4, section.gutter-none > div.l-4 {
+        width: calc(33.33% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-5, section.gutter-none > div.m-5, section.gutter-none > div.l-6 {
+        width: calc(41.675% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-6, section.gutter-none > div.m-6, section.gutter-none > div.l-6 {
+        width: calc(50% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-7, section.gutter-none > div.m-7, section.gutter-none > div.l-7 {
+        width: calc(58.318% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-8, section.gutter-none > div.m-8, section.gutter-none > div.l-8 {
+        width: calc(66.6544% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-9, section.gutter-none > div.m-9, section.gutter-none > div.l-9 {
+        width: calc(74.9908% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-10, section.gutter-none > div.m-10, section.gutter-none > div.l-10 {
+        width: calc(83.3272% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-11, section.gutter-none > div.m-11, section.gutter-none > div.l-11 {
+        width: calc(91.6636% - 0.01%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.gutter-none > div.s-12, section.gutter-none > div.m-12, section.gutter-none > div.l-12 {
+        width: calc(100% - 0.01%);
+    }
+}
+
+/*# sourceMappingURL=_gutter.css.map */

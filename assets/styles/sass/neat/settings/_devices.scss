@@ -1,0 +1,46 @@
+$hide: none;
+$show: block;
+
+.hide-mobile {
+  @media only screen and (max-width: 767px) {
+    display: $hide;
+  }
+}
+
+.hide-tablet {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    display: $hide;
+  }
+}
+
+.hide-desktop {
+  @media only screen and (min-width: 992px) {
+    display: $hide;
+  }
+}
+
+.show-mobile {
+  @media only screen and (max-width: 767px) {
+    display: $show;
+  }
+}
+
+.show-tablet {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    display: $show;
+  }
+}
+
+.show-desktop {
+  @media only screen and (min-width: 992px) {
+    display: $show;
+  }
+}
+
+.hide {
+  display: $hide;
+}
+
+.show {
+  display: $show;
+}
